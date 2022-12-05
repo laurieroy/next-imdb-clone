@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function Results() {
+export default function Results({results}) {
   return (
-    <div><h1>Results</h1></div>
+    <div>{results.map(result => (
+      <h1 key={result.id}>{result.title}</h1>
+   
+    ))}</div>
   )
 }
